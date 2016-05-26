@@ -1,0 +1,25 @@
+<StackLayout>
+    <Button text="Get Contacts" (tap)="getPhoneContacts()"></Button>
+    <Label [text]="message" class="message" textWrap="true"></Label>
+    <GridLayout rows="auto, *">
+        <GridLayout row="0" columns="*, auto" class="add-bar">
+            <TextField #contactTF [(ngModel)]="contact" hint="Find Contacts" col="0"></TextField>
+            <!--Image src="res://add" col="1" (tap)="add()"></Image-->
+        </GridLayout>
+        <ListView row="1" [items]="contactsArr" class="small-spacing">
+            <template let-item="item">
+              <Label [text]="item.name" class="medium-spacing"></Label>
+            </template>
+          </ListView>
+        <!--ListView row="1" [items]="contactsArr" class="small-spacing" [class.visible]="listLoaded">
+            <template let-item="item">
+                <Label [text]="item.name" class="medium-spacing"></Label>
+                <GridLayout column="45, *" (tap)="toggleSelected(item)"
+                    class="contact-list-item-container">
+                    <Checkbox col="0" [checked]="item.selected" (tap)="toggleSelected(this)"></Checkbox>
+                    <Label col="1" [text]="item.name" class="medium-spacing"></Label>
+                </GridLayout>
+            </template>
+        </ListView-->
+    </GridLayout>
+</StackLayout>

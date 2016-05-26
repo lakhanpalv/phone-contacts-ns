@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">My Phone Contacts Listing</string>
+    <string name="title_activity_kimera">Phone Contacts Listing</string>
+</resources>
